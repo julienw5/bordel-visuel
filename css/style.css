@@ -1,0 +1,78 @@
+body{
+	margin: 0;
+}
+
+a{
+	  border: none;
+  background: none;
+  text-decoration: none;
+}
+
+a img{
+	-webkit-filter: grayscale(100%);
+	-webkit-transition:filter .5s;
+	transition:.5s;
+}
+
+a img:hover{
+	-webkit-filter: grayscale(0%);
+}
+
+.submit{
+	background: #a67f4e;
+	border: 2px solid #a67f4e;
+	padding: 5px 8px;
+	color: white;
+	display: block;
+	  font-weight: 700;
+	    width: 100%;
+}
+
+.submit:hover {
+  border-color: #a67f4e;
+  background: none;
+  color: #a67f4e;
+}
+
+.custom-file-input {
+  color: white;
+  width: 100%;
+  margin-top: 20px;
+}
+
+
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: 'AJOUTER UNE IMAGE';
+  display: inline-block;
+  background: #a67f4e;
+  border: 2px solid #a67f4e;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 10pt;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+/**/
+
+
+.custom-file-input:hover {
+  color: white;
+}
+
+.custom-file-input:hover::before {
+  border-color: #a67f4e;
+  background: none;
+  color: #a67f4e;
+}
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}

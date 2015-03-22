@@ -9,18 +9,7 @@
    	</head>
     <body>
 
-    	<?php include 'inc/class.upload.php'; ?>
-	
-		    <form enctype="multipart/form-data" method="post" action="#">
-		          
-		          <input class="custom-file-input" id="file" type="file" name="image_field" value="" required >
-		        
-		          <input class="submit" type="submit" name="Submit" value="POSTER">
-		        
-		    </form>
-		
-
-<?php
+    <?php
 
  $handle = new upload($_FILES['image_field']);
   if ($handle->uploaded) {
@@ -44,18 +33,31 @@
       $files = [];
       $dir = './files';
       $files = scandir($dir);
-	
+  
       foreach ($files as $file) {
-      	$file_del = substr($file, 0, 1);
-      	if($file_del != '.'){
-      		echo "<a href='./files/$file' target='_blank'>
+        $file_del = substr($file, 0, 1);
+        if($file_del != '.'){
+          echo "<a href='./files/$file' target='_blank'>
                   <img src='./files/$file' height='105px' width='179px'>
                 </a>";
-      	}
+        }
       }
       
 
 ?>
+
+    	<?php include 'inc/class.upload.php'; ?>
+	
+		    <form enctype="multipart/form-data" method="post" action="#">
+		          
+		          <input class="custom-file-input" id="file" type="file" name="image_field" value="" required >
+		        
+		          <input class="submit" type="submit" name="Submit" value="POSTER">
+		        
+		    </form>
+		
+
+
 
 
 
